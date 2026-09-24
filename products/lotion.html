@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>バランシングローション | LUMÉA</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  color:#3d3935;
+  background:#faf9f6;
+  line-height:1.9;
+}
+
+a{color:inherit;text-decoration:none}
+
+header{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 7%;
+  border-bottom:1px solid #e7e1da;
+}
+
+.logo{
+  font-size:24px;
+  letter-spacing:7px;
+}
+
+.back{
+  font-size:11px;
+  letter-spacing:2px;
+}
+
+main{
+  max-width:1080px;
+  margin:auto;
+  padding:70px 7% 100px;
+}
+
+.product-main{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.visual{
+  min-height:500px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(145deg,#e8e0d7,#f8f6f2);
+}
+
+.bottle{
+  width:125px;
+  height:290px;
+  background:linear-gradient(90deg,#c8b8a5,#f4eee6,#bbaa97);
+  border-radius:5px 5px 18px 18px;
+  box-shadow:0 30px 45px rgba(70,55,40,.2);
+  position:relative;
+}
+
+.bottle:before{
+  content:"LUMÉA";
+  position:absolute;
+  width:100%;
+  top:125px;
+  text-align:center;
+  font-size:13px;
+  letter-spacing:3px;
+}
+
+.bottle:after{
+  content:"";
+  position:absolute;
+  width:64px;
+  height:40px;
+  top:-40px;
+  left:31px;
+  background:#80766d;
+}
+
+.eyebrow{
+  font-size:10px;
+  letter-spacing:4px;
+  color:#9a8f85;
+}
+
+h1{
+  font-size:30px;
+  font-weight:normal;
+  letter-spacing:3px;
+  margin-top:12px;
+}
+
+.en{
+  font-size:11px;
+  letter-spacing:3px;
+  color:#999;
+  margin-top:5px;
+}
+
+.price{
+  font-family:Arial,sans-serif;
+  margin-top:24px;
+  font-size:15px;
+}
+
+.lead{
+  margin-top:35px;
+  font-size:14px;
+}
+
+.info{
+  margin-top:85px;
+  border-top:1px solid #ddd5cc;
+  padding-top:55px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+.info h2{
+  font-size:13px;
+  letter-spacing:3px;
+  font-weight:normal;
+  margin-bottom:18px;
+}
+
+.info p{font-size:13px}
+
+footer{
+  text-align:center;
+  padding:45px;
+  background:#ebe6df;
+  font-size:10px;
+  letter-spacing:2px;
+  color:#888;
+}
+
+@media(max-width:700px){
+  header{height:64px}
+  main{padding-top:35px}
+
+  .product-main{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .visual{min-height:380px}
+
+  .info{
+    grid-template-columns:1fr;
+    gap:40px;
+    margin-top:60px;
+  }
+
+  h1{font-size:24px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="../index.html">LUMÉA</a>
+  <a class="back" href="../index.html#products">← PRODUCTS</a>
+</header>
+
+<main>
+
+<section class="product-main">
+
+  <div class="visual">
+    <div class="bottle"></div>
+  </div>
+
+  <div>
+    <div class="eyebrow">LUMÉA SKIN CARE</div>
+
+    <h1>バランシングローション</h1>
+    <div class="en">BALANCING LOTION</div>
+
+    <div class="price">150mL　¥4,400</div>
+
+    <p class="lead">
+      みずみずしいうるおいで肌を整え、<br>
+      次のケアを心地よく受け入れるための化粧水。
+    </p>
+  </div>
+
+</section>
+
+<section class="info">
+
+  <div>
+    <h2>FEATURE</h2>
+    <p>
+      軽やかな使用感で角質層までうるおいを届け、<br>
+      乾燥しやすい肌をなめらかに整えます。
+    </p>
+  </div>
+
+  <div>
+    <h2>HOW TO USE</h2>
+    <p>
+      洗顔後、適量を手のひらまたはコットンに取り、<br>
+      顔全体へやさしくなじませてください。
+    </p>
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  © 2026 LUMÉA　DEMO COSMETICS BRAND
+</footer>
+
+</body>
+</html>
