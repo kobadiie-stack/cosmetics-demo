@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LUMÉA | Skin Care</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  color:#3d3935;
+  background:#faf9f6;
+  line-height:1.8;
+}
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 7%;
+  background:rgba(250,249,246,.94);
+  z-index:10;
+  border-bottom:1px solid rgba(0,0,0,.05);
+}
+
+.logo{
+  font-size:25px;
+  letter-spacing:7px;
+  font-weight:normal;
+}
+
+nav a{
+  text-decoration:none;
+  color:#555;
+  margin-left:32px;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:100px 20px 50px;
+  background:
+    radial-gradient(circle at 70% 25%,#eee5dc 0,transparent 30%),
+    linear-gradient(135deg,#f7f4ef,#e9e0d7);
+}
+
+.hero-inner{
+  max-width:850px;
+}
+
+.hero-small{
+  font-size:12px;
+  letter-spacing:5px;
+  margin-bottom:25px;
+}
+
+.hero h1{
+  font-size:clamp(35px,6vw,72px);
+  font-weight:normal;
+  letter-spacing:8px;
+  line-height:1.35;
+}
+
+.hero p{
+  margin-top:30px;
+  font-size:15px;
+  letter-spacing:3px;
+}
+
+.hero-button{
+  display:inline-block;
+  margin-top:45px;
+  padding:13px 40px;
+  border:1px solid #766d65;
+  color:#49433e;
+  text-decoration:none;
+  font-size:12px;
+  letter-spacing:3px;
+  transition:.3s;
+}
+
+.hero-button:hover{
+  background:#49433e;
+  color:white;
+}
+
+section{
+  padding:110px 8%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.section-title span{
+  display:block;
+  font-size:11px;
+  letter-spacing:5px;
+  color:#9a8f85;
+  margin-bottom:10px;
+}
+
+.section-title h2{
+  font-size:27px;
+  font-weight:normal;
+  letter-spacing:4px;
+}
+
+.concept{
+  background:white;
+  text-align:center;
+}
+
+.concept p{
+  max-width:720px;
+  margin:auto;
+  font-size:15px;
+  line-height:2.5;
+}
+
+.products{
+  background:#f3f0eb;
+}
+
+.product-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.product{
+  background:#fff;
+  text-align:center;
+  padding-bottom:35px;
+  transition:.3s;
+}
+
+.product:hover{
+  transform:translateY(-7px);
+}
+
+.product-image{
+  height:330px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(145deg,#e8e0d7,#f8f6f2);
+}
+
+/* 仮の商品ボトル */
+.bottle{
+  width:90px;
+  height:210px;
+  background:linear-gradient(90deg,#c8b8a5,#f4eee6,#bbaa97);
+  border-radius:4px 4px 13px 13px;
+  box-shadow:0 25px 35px rgba(70,55,40,.18);
+  position:relative;
+}
+
+.bottle:before{
+  content:"LUMÉA";
+  position:absolute;
+  width:100%;
+  top:90px;
+  left:0;
+  font-size:11px;
+  letter-spacing:2px;
+}
+
+.bottle:after{
+  content:"";
+  position:absolute;
+  width:48px;
+  height:30px;
+  top:-30px;
+  left:21px;
+  background:#80766d;
+}
+
+.product h3{
+  margin-top:28px;
+  font-size:16px;
+  font-weight:normal;
+  letter-spacing:2px;
+}
+
+.product .en{
+  font-size:10px;
+  color:#999;
+  letter-spacing:2px;
+  margin-top:4px;
+}
+
+.price{
+  margin-top:14px;
+  font-family:Arial,sans-serif;
+  font-size:13px;
+}
+
+.features{
+  background:#403b37;
+  color:#eee9e4;
+}
+
+.feature-grid{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  text-align:center;
+  gap:50px;
+}
+
+.feature-number{
+  font-family:Georgia,serif;
+  font-size:35px;
+  color:#bbaa98;
+}
+
+.feature-grid h3{
+  font-size:15px;
+  letter-spacing:2px;
+  margin:15px 0;
+  font-weight:normal;
+}
+
+.feature-grid p{
+  font-size:12px;
+  color:#cfc8c1;
+}
+
+.news{
+  background:#fff;
+}
+
+.news-list{
+  max-width:800px;
+  margin:auto;
+}
+
+.news-item{
+  padding:22px 0;
+  border-bottom:1px solid #ddd8d2;
+  font-size:13px;
+}
+
+.news-item time{
+  display:inline-block;
+  width:130px;
+  color:#9a8f85;
+}
+
+footer{
+  text-align:center;
+  padding:70px 20px;
+  background:#ebe6df;
+}
+
+footer .footer-logo{
+  font-size:22px;
+  letter-spacing:7px;
+}
+
+footer p{
+  margin-top:20px;
+  font-size:10px;
+  letter-spacing:2px;
+  color:#888;
+}
+
+@media(max-width:700px){
+
+  header{
+    height:65px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .hero h1{
+    letter-spacing:4px;
+  }
+
+  section{
+    padding:80px 7%;
+  }
+
+  .product-grid,
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .product-image{
+    height:280px;
+  }
+
+  .news-item time{
+    display:block;
+    width:auto;
+    margin-bottom:5px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">LUMÉA</div>
+
+  <nav>
+    <a href="#concept">CONCEPT</a>
+    <a href="#products">PRODUCTS</a>
+    <a href="#news">NEWS</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-small">LUMÉA SKIN CARE</div>
+
+    <h1>
+      肌に、静かな<br>
+      美しさを。
+    </h1>
+
+    <p>
+      毎日の肌と向き合うためのスキンケア
+    </p>
+
+    <a href="#products" class="hero-button">
+      PRODUCTS
+    </a>
+  </div>
+</section>
+
+<section class="concept" id="concept">
+
+  <div class="section-title">
+    <span>OUR PHILOSOPHY</span>
+    <h2>美しさは、積み重ねから。</h2>
+  </div>
+
+  <p>
+    LUMÉAは、毎日のスキンケアを
+    自分自身と向き合う時間と考えます。<br>
+    必要なものを、必要なだけ。<br>
+    シンプルで心地よいケアを通じて、
+    肌本来の美しさを引き出すことを目指します。
+  </p>
+
+</section>
+
+<section class="products" id="products">
+
+  <div class="section-title">
+    <span>PRODUCTS</span>
+    <h2>肌のための、3つのステップ。</h2>
+  </div>
+
+  <div class="product-grid">
+
+    <article class="product">
+      <div class="product-image">
+        <div class="bottle"></div>
+      </div>
+
+      <h3>バランシングローション</h3>
+      <div class="en">BALANCING LOTION</div>
+      <div class="price">150mL　¥4,400</div>
+    </article>
+
+    <article class="product">
+      <div class="product-image">
+        <div class="bottle"></div>
+      </div>
+
+      <h3>リペアセラム</h3>
+      <div class="en">REPAIR SERUM</div>
+      <div class="price">30mL　¥7,700</div>
+    </article>
+
+    <article class="product">
+      <div class="product-image">
+        <div class="bottle"></div>
+      </div>
+
+      <h3>モイスチャークリーム</h3>
+      <div class="en">MOISTURE CREAM</div>
+      <div class="price">40g　¥6,600</div>
+    </article>
+
+  </div>
+
+</section>
+
+<section class="features">
+
+  <div class="feature-grid">
+
+    <div>
+      <div class="feature-number">01</div>
+      <h3>厳選した原料</h3>
+      <p>
+        毎日使うものだからこそ、<br>
+        原料選びから丁寧に。
+      </p>
+    </div>
+
+    <div>
+      <div class="feature-number">02</div>
+      <h3>国内製造</h3>
+      <p>
+        品質を大切にしながら、<br>
+        国内で丁寧に製造しています。
+      </p>
+    </div>
+
+    <div>
+      <div class="feature-number">03</div>
+      <h3>シンプルなケア</h3>
+      <p>
+        毎日続けられる、<br>
+        心地よいスキンケアを。
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="news" id="news">
+
+  <div class="section-title">
+    <span>NEWS</span>
+    <h2>お知らせ</h2>
+  </div>
+
+  <div class="news-list">
+
+    <div class="news-item">
+      <time>2026.09.20</time>
+      秋のスキンケアキャンペーンのお知らせ
+    </div>
+
+    <div class="news-item">
+      <time>2026.09.01</time>
+      LUMÉA公式サイトをオープンしました
+    </div>
+
+    <div class="news-item">
+      <time>2026.08.18</time>
+      新商品「リペアセラム」発売のお知らせ
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-logo">LUMÉA</div>
+  <p>DEMO COSMETICS BRAND</p>
+  <p>© 2026 LUMÉA</p>
+</footer>
+
+</body>
+</html>
