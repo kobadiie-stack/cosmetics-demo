@@ -96,12 +96,6 @@ nav a{
   text-decoration:none;
   font-size:12px;
   letter-spacing:3px;
-  transition:.3s;
-}
-
-.hero-button:hover{
-  background:#49433e;
-  color:white;
 }
 
 section{
@@ -170,7 +164,12 @@ section{
   background:linear-gradient(145deg,#e8e0d7,#f8f6f2);
 }
 
-/* 仮の商品ボトル */
+.product-link{
+  color:inherit;
+  text-decoration:none;
+  display:block;
+}
+
 .bottle{
   width:90px;
   height:210px;
@@ -350,13 +349,9 @@ footer p{
       美しさを。
     </h1>
 
-    <p>
-      毎日の肌と向き合うためのスキンケア
-    </p>
+    <p>毎日の肌と向き合うためのスキンケア</p>
 
-    <a href="#products" class="hero-button">
-      PRODUCTS
-    </a>
+    <a href="#products" class="hero-button">PRODUCTS</a>
   </div>
 </section>
 
@@ -387,16 +382,23 @@ footer p{
   <div class="product-grid">
 
     <article class="product">
-      <div class="product-image">
-        <div class="bottle"></div>
-      </div>
 
-      <h3>バランシングローション</h3>
-      <div class="en">BALANCING LOTION</div>
-      <div class="price">150mL　¥4,400</div>
+      <a href="products/lotion.html" class="product-link">
+
+        <div class="product-image">
+          <div class="bottle"></div>
+        </div>
+
+        <h3>バランシングローション</h3>
+        <div class="en">BALANCING LOTION</div>
+        <div class="price">150mL　¥4,400</div>
+
+      </a>
+
     </article>
 
     <article class="product">
+
       <div class="product-image">
         <div class="bottle"></div>
       </div>
@@ -404,9 +406,11 @@ footer p{
       <h3>リペアセラム</h3>
       <div class="en">REPAIR SERUM</div>
       <div class="price">30mL　¥7,700</div>
+
     </article>
 
     <article class="product">
+
       <div class="product-image">
         <div class="bottle"></div>
       </div>
@@ -414,6 +418,7 @@ footer p{
       <h3>モイスチャークリーム</h3>
       <div class="en">MOISTURE CREAM</div>
       <div class="price">40g　¥6,600</div>
+
     </article>
 
   </div>
@@ -427,28 +432,19 @@ footer p{
     <div>
       <div class="feature-number">01</div>
       <h3>厳選した原料</h3>
-      <p>
-        毎日使うものだからこそ、<br>
-        原料選びから丁寧に。
-      </p>
+      <p>毎日使うものだからこそ、<br>原料選びから丁寧に。</p>
     </div>
 
     <div>
       <div class="feature-number">02</div>
       <h3>国内製造</h3>
-      <p>
-        品質を大切にしながら、<br>
-        国内で丁寧に製造しています。
-      </p>
+      <p>品質を大切にしながら、<br>国内で丁寧に製造しています。</p>
     </div>
 
     <div>
       <div class="feature-number">03</div>
       <h3>シンプルなケア</h3>
-      <p>
-        毎日続けられる、<br>
-        心地よいスキンケアを。
-      </p>
+      <p>毎日続けられる、<br>心地よいスキンケアを。</p>
     </div>
 
   </div>
